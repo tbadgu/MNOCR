@@ -1,0 +1,13 @@
+import os
+from os import listdir
+from os.path import isfile, join
+path='/home/tushar/Paper/Data/final/zero/'
+files=[f for f in listdir(path) if isfile(join(path,f))]
+for f in files:
+	str_list=[]
+	str_list.append('./B10 ')
+	str_list.append(str(f))
+	cmd = ''.join(str_list)
+	print cmd
+	os.system(cmd)
+
